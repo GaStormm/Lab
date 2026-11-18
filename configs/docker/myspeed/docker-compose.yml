@@ -11,7 +11,7 @@ services:
     environment:
       TZ: America/Sao_Paulo
     volumes:
-      - /DATA/AppData/big-bear-myspeed/data:/myspeed/data
+      - /DATA/AppData/myspeed/data:/myspeed/data
     deploy:
       resources:
         limits:
