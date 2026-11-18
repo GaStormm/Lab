@@ -1,0 +1,37 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Secrets, keys, and environment variables
+*.env
+.env.*
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*secret*
+*credentials*
+
+# Terraform / OpenTofu
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+
+# Ansible
+*.retry
+vault_pass.txt
+.vault_pass
+
+# Temporary backups and dumps
+*.bak
+*.tmp
+*.swp
+*.dump
+*.sql
+*.tar.gz

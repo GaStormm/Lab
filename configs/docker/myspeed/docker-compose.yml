@@ -1,0 +1,22 @@
+name: myspeed
+
+services:
+  myspeed:
+    image: germannewsmaker/myspeed:1.0.9
+    container_name: myspeed
+    hostname: myspeed
+    restart: unless-stopped
+    ports:
+      - "5216:5216/tcp"
+    environment:
+      TZ: America/Sao_Paulo
+    volumes:
+      - /DATA/AppData/big-bear-myspeed/data:/myspeed/data
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+networks:
+  default:
+    name: myspeed_default

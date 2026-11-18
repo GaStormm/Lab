@@ -1,0 +1,27 @@
+name: code-server
+
+services:
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: code-server
+    hostname: code-server
+    restart: unless-stopped
+    network_mode: bridge
+    ports:
+      - "8444:8443/tcp"
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+      TZ: America/Sao_Paulo
+      DEFAULT_WORKSPACE: /config/workspace
+      PASSWORD: ${CODE_SERVER_1_PASSWORD}
+    volumes:
+      - /DATA/AppData/code-server/config:/config
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+networks:
+  default:
+    name: code-server_default

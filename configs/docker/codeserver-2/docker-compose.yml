@@ -1,0 +1,28 @@
+name: codeserver-2
+
+services:
+  codeserver-2:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: codeserver-2
+    hostname: codeserver-2
+    restart: unless-stopped
+    network_mode: bridge
+    ports:
+      - "8455:8443/tcp"
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+      TZ: America/Sao_Paulo
+      DEFAULT_WORKSPACE: /config/workspace
+      PASSWORD: ${CODE_SERVER_2_PASSWORD}
+      SUDO_PASSWORD: ${CODE_SERVER_2_SUDO_PASSWORD}
+    volumes:
+      - /DATA/AppData/CodeSpaces2/config:/config
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+networks:
+  default:
+    name: codeserver-2_default

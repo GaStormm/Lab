@@ -1,0 +1,26 @@
+name: gitea
+
+services:
+  gitea:
+    image: gitea/gitea:latest
+    container_name: gitea
+    hostname: gitea
+    restart: unless-stopped
+    network_mode: bridge
+    ports:
+      - "3000:3000/tcp"
+      - "2222:22/tcp"
+    environment:
+      USER_UID: "1000"
+      USER_GID: "1000"
+      TZ: America/Sao_Paulo
+    volumes:
+      - /DATA/AppData/gitea:/data
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+networks:
+  default:
+    name: gitea_default

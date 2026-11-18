@@ -1,0 +1,29 @@
+name: nginxproxymanager
+
+services:
+  nginxproxymanager:
+    image: jc21/nginx-proxy-manager:latest
+    container_name: nginxproxymanager
+    hostname: nginxproxymanager
+    restart: unless-stopped
+    network_mode: bridge
+    ports:
+      - "80:80/tcp"
+      - "443:443/tcp"
+      - "81:81/tcp"
+    environment:
+      DISABLE_IPV6: "true"
+      TZ: America/Sao_Paulo
+    volumes:
+      - /DATA/AppData/nginxproxymanager/data:/data
+      - /DATA/AppData/nginxproxymanager/etc/letsencrypt:/etc/letsencrypt
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+        reservations:
+          memory: 128M
+
+networks:
+  default:
+    name: nginxproxymanager_default
