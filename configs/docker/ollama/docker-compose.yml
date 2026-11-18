@@ -3,7 +3,7 @@ name: ollama
 services:
   ollama:
     image: ollama/ollama:0.40.13
-    container_name: big-bear-ollama-cpu
+    container_name: ollama-cpu
     hostname: ollama
     restart: unless-stopped
     devices:
@@ -14,7 +14,7 @@ services:
       PORT: "11434"
       TZ: America/Sao_Paulo
     volumes:
-      - /DATA/AppData/big-bear-ollama-cpu/.ollama:/root/.ollama
+      - /DATA/AppData/ollama-cpu/.ollama:/root/.ollama
     deploy:
       resources:
         limits:
