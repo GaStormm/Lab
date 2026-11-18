@@ -23,7 +23,7 @@ services:
       N8N_SECURE_COOKIE: "false"
       TZ: America/Sao_Paulo
     volumes:
-      - /DATA/AppData/big-bear-n8n/.n8n:/home/node/.n8n
+      - /DATA/AppData/n8n/.n8n:/home/node/.n8n
     deploy:
       resources:
         limits:
@@ -44,8 +44,8 @@ services:
       timeout: 5s
       retries: 10
     volumes:
-      - /DATA/AppData/big-bear-n8n/pgdata:/var/lib/postgresql/data
-      - /DATA/AppData/big-bear-n8n/db/init-data.sh:/docker-entrypoint-initdb.d/init-data.sh
+      - /DATA/AppData/n8n/pgdata:/var/lib/postgresql/data
+      - /DATA/AppData/n8n/db/init-data.sh:/docker-entrypoint-initdb.d/init-data.sh
     deploy:
       resources:
         limits:
