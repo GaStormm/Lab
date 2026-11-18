@@ -4,11 +4,8 @@
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Ubuntu Server](https://img.shields.io/badge/Ubuntu_24.04_LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 ![Debian](https://img.shields.io/badge/Debian_LXC-A81D33?style=for-the-badge&logo=debian&logoColor=white)
-![MikroTik](https://img.shields.io/badge/MikroTik_RouterOS-293239?style=for-the-badge&logo=mikrotik&logoColor=white)
-![Fortinet](https://img.shields.io/badge/FortiSwitch-EE3124?style=for-the-badge&logo=fortinet&logoColor=white)
 ![Zabbix](https://img.shields.io/badge/Zabbix-D40000?style=for-the-badge&logo=zabbix&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
-![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)
 ![Tailscale](https://img.shields.io/badge/Tailscale-242424?style=for-the-badge&logo=tailscale&logoColor=white)
 
 Architecture repository, operational documentation, and sanitized configurations for my **Homelab**: a hybrid virtualization (**Proxmox VE**) and containerization (**Docker**) environment designed under enterprise standards for continuous hands-on practice in **Network Engineering, Security, Observability, Distributed Storage, and DevOps Automation**.
